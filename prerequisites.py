@@ -238,7 +238,7 @@ def apply_prerequisites(res: pd.DataFrame, df: pd.DataFrame) -> pd.DataFrame:
     set_flag(mask_any_u12_english, 'English Language U34')
     set_flag(mask_any_u12_english, 'Literature U34')
 
-    set_flag((sget('GMATU12') != '') | mat_high10 | (y10 & new4), 'General Mathematics U34')
+    set_flag((sget('GMATU12') != '') | (sget('MATMU12') != '') | mat_high10 | (y10 & new4), 'General Mathematics U34')
     set_flag((sget('HHDU12') != ''), 'Health and Human Development U34')
     set_flag((sget('HISU12') != ''), 'History U34')
     set_flag((sget('LEGU12') != ''), 'Legal Studies U34')
