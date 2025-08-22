@@ -246,7 +246,7 @@ def apply_prerequisites(res: pd.DataFrame, df: pd.DataFrame) -> pd.DataFrame:
     set_flag((sget('PEU12') != ''), 'Physical Education U34')
     set_flag((sget('PHYU12') != ''), 'Physics U34')
     set_flag((sget('PSYU12') != ''), 'Psychology U34')
-    set_flag((sget('SMATU12') != '') | sget('MATMU12').isin(['B+','A','A+']), 'Specialist Mathematics U34')
+    set_flag((sget('SMATU12') != '') | (y11 & sget('MATMU12').isin(['B+','A','A+'])) | (y11 & new5), 'Specialist Mathematics U34')
     set_flag((sget('TURU12') != ''), 'Turkish U34')
     set_flag((sget('VBUSU12') != ''), 'VCE VET Business U34')
     set_flag((sget('VSRU12') != ''), 'VCE VET Sport and Recreation U34')
