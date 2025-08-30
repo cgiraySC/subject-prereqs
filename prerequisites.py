@@ -138,7 +138,7 @@ def apply_prerequisites(res: pd.DataFrame, df: pd.DataFrame) -> pd.DataFrame:
     set_flag((sget('RFIT') == '') & (y8 | y9) & (sget('HPE2').isin(['C','C+','B','B+','A','A+']) | sget('HPE3').isin(['C','C+','B','B+','A','A+']) | new5), 'Recreational Fitness')
     set_flag((sget('RMAT') == '') & (y8 | y9), 'Recreational Mathematics')
 
-    set_flag((y8 & (sget('SCI2').isin(['B+','A','A+']) | new4)) | (y9 & (sget('SCI3').isin(['C+','B','B+','A','A+']) | new4)), 'Research Science 1')
+    set_flag((y8 & (sget('SCI2').isin(['B+','A','A+']) | new4)) | (y9 & (sget('SCI3').isin(['C','C+','B','B+','A','A+']) | new4)), 'Research Science 1')  # C is added for Y10 pathway
     set_flag((y8 & (sget('SCI2').isin(['B+','A','A+']) | new4)), 'Research Science 2')
 
     set_flag((sget('ROB2') == '') & (y8 | y9), 'Robotics 2')
